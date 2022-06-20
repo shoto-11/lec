@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>JIZI 講義室一覧サイト</title>
+        <link rel="stylesheet" href=room.css>
+</head>
+<body>
+    <div class="top">
+        <a href=https://jizi.jp id="jizi">
+        <img src="jizi.png" alt="見れなくて残念だなｗ" id="jizi1"></a>
+        <h3 id="title">工大祭講義室一覧サイト</h3>
+    </div>
+    <div class="brank">
+        <img src="all.png" alt="見れなくて残念だなｗ" id="all" />  
+        <img src="taki.png" alt="見れなくて残念だなｗ" id="taki" />
+        <img src="図書館.png" alt="見れなくて残念だなｗ" id="library" />
+    </div>
+
+<div class="modal-container">
+  <div class="modal-body">
+    <div class="modal-close">×</div>
+    <div class="modal-content">
+    <div id="lib_cont">
+        <h3>図書館</h3>
+        <img src="lib.jpeg" alt="見れなくて残念だなｗ" id="lib" />
+    </div>   
+    <div id="taki_cont">
+      <h3>Taki Plaza</h3>
+      <img src="taki.webp" alt="見れなくて残念だなｗ" id="tak" />
+    </div>
+    </div> 
+    </div>
+  </div>
+  <div id="back"></div>
+  <video id="jizi_mv" autoplay muted loop src="jizi.mp4"></video>
+</body>    
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    /*
+    function provoke(name){     
+        $(function () {
+            $(name).hover(function() {       
+    // 徐々に透過
+            $(name).fadeTo('slow', 0.5);
+    }, function(){
+    // 元に戻す
+    $(name).fadeTo('normal', 2);
+        });         
+    });}
+    provoke("#taki")*/
+    function write(name){
+        document.getElementById(name).addEventListener("click",function(){})}
+        $(function(){
+
+     function show(){
+        var arg = arguments;
+        for(var i=0;i<arg.length;i++){
+        document.getElementById(arg[i]).style.display ="block";}}
+    function hide(){
+
+        var arg = arguments;
+        for(var i=0;i<arg.length;i++){
+        document.getElementById(arg[i]).style.display ="none";}}
+  // 変数に要素を入れる
+  function modern(open,cont){
+    var open = $(open),
+    close = $('.modal-close'),
+    container = $('.modal-container');
+
+  //開くボタンをクリックしたらモーダルを表示する
+  open.on('click',function(){ 
+    container.addClass('active');
+    hide("taki_cont","lib_cont")
+    show(cont);
+    return false;
+  });
+
+  //閉じるボタンをクリックしたらモーダルを閉じる
+  close.on('click',function(){  
+    container.removeClass('active');
+});
+
+  //モーダルの外側をクリックしたらモーダルを閉じる
+  $(document).on('click',function(e) {
+    if(!$(e.target).closest('.modal-body').length) {
+      container.removeClass('active');
+    }
+  });
+}   
+    modern('#taki',"taki_cont");
+    modern('#library','lib_cont');
+    window.onload =setTimeout(function() {$("#jizi_mv").fadeOut();}, 3500,);
+    window.onload =setTimeout(function() {$("#back").fadeOut();}, 3800,);
+    $("#jizi_mv").on('click',function() {
+        $("#jizi_mv").fadeOut();
+        setTimeout(function() {$("#back").fadeOut();}, 200,);
+    });
+    $("#back").on('click',function() {
+        $("#jizi_mv").fadeOut();
+        setTimeout(function() {$("#back").fadeOut();}, 200,);
+    });
+
+});
+</script>

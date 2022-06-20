@@ -1,0 +1,184 @@
+#jizi_mv{
+    position:absolute;
+    top:0px;
+    width:100%;
+    left:0px;
+}
+.top{
+    position:relative;
+    display: flex;
+    justify-content: center;/* 左右中央を指定しています */
+    height: 70px;/* 高さは適宜変更してください */
+    
+}
+#jizi{
+    position:absolute;
+    top:0px;
+}
+#jizi1{
+    width:50px;
+}
+#link{
+    position:absolute;
+    width:80px;
+    height:73.72px;
+}
+#title{
+    position:absolute;
+    top:0px;
+    left: 10px;
+}
+.brank{
+    position:relative;
+    display: flex;
+    justify-content: center;/* 左右中央を指定しています */
+    align-items: center;/* 上下中央を指定しています */
+    height: 500px;/* 高さは適宜変更してください */
+    
+}
+#all{
+    position:absolute;
+    width:800px;
+    /*transform: translateY(50%) translateX(50%);/* 要素の大きさの半分の距離を左、上方向に移動する */
+    /*-webkit-transform: translateY(10%) translateX(40%);*/
+}
+#taki{
+    position:absolute;
+    margin-top: 318px;
+    margin-left: 542px;
+    width:210px;
+        transition: 0.5s ;
+        
+}
+#taki:hover {
+        opacity: 0.5 ;
+    }
+#library{
+    position:absolute;
+    margin-top: 144px;
+    margin-left: 543px;
+    width:74px;
+    transition: 0.5s ;
+            
+    }
+#library:hover {
+    opacity: 0.5 ;
+    }
+#lib,#tak{
+    margin-top: 0px;
+    margin-left: 0px;
+    width:100%;
+}
+#back{
+    position:absolute;
+    top:0px;
+    width:100%;
+    left:0px;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+}
+/*
+@media screen and (max-width: 800px) {
+    #all{
+        position:absolute;
+        left:10px;
+        width:100%;
+    }
+    #taki{
+        position:absolute;
+        width:12.5%; 
+        top: 280px;
+        left: 10px;
+        
+    }}
+    .modal-open{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  margin: auto;
+  cursor: pointer;
+  transform: translate(-50%,-50%);
+}
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+/*モーダルを開くボタン*/
+.modal-open{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+    background: #000;
+    margin: auto;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+  }
+  /*モーダル本体の指定 + モーダル外側の背景の指定*/
+  .modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,50%);
+    padding: 40px 20px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    box-sizing: border-box;
+  }
+  /*モーダル本体の擬似要素の指定*/
+  .modal-container:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  /*モーダル本体に「active」クラス付与した時のスタイル*/
+  .modal-container.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  /*モーダル枠の指定*/
+  .modal-body{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 800px;
+    width: 90%;
+  }
+  /*モーダルを閉じるボタンの指定*/
+  .modal-close{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -40px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+  /*モーダル内のコンテンツの指定*/
+  .modal-content{
+    background: #fff;
+    text-align: left;
+    padding: 30px;
+  }
